@@ -1,0 +1,118 @@
+
+.inputt{
+    height: 40px;
+    width: 320px;
+    border-radius: 4px;
+    border-color: #80808096;
+}
+.infocontact{
+    margin: 7% 0 3% 14%;
+    
+}
+.inputtcontact{
+    height: 40px;
+    width: 320px;
+    border-radius: 4px;
+    border-color: #80808096;
+}
+.inncontact{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.infoo{
+    display: flex;
+    flex-direction: column;
+}
+.innamecontact{
+    display: flex;
+    flex-direction: column;
+}
+.upcontact{
+   display: flex;
+   flex-direction: column;
+   align-items: center;   
+}
+.down{
+    white-space: break-spaces;
+}
+.btn{
+    border-radius: 15px;
+    color: white;
+    background-color: orange;
+    padding: 20px;
+    width: 150px;
+    cursor: pointer;
+    filter: drop-shadow(orange);
+}
+
+.btttn{
+    display: flex;
+    align-items: center;
+}
+.boxxx{
+    margin-left: 14%;
+}
+.derouler{
+    height: 40px;
+    width: 320px;
+    border-radius: 4px;
+    border-color: #80808096;
+    color: #808080a3;
+    width: 90%;
+}
+.drl{
+    margin-left: 9%;
+}
+.msg{
+    display: flex;
+    flex-direction: column;
+}
+.msgg{
+    border-color: #80808096;
+    color: #808080a3;
+    height: 200px;
+    border-radius: 4px;
+    width: 90%;
+}
+.map{
+    margin-left: 9%;
+}
+.mapp{
+    width: 90%;
+}
+.btnr{
+    display: flex;
+    justify-content: center;
+}
+.bttnr{
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 5%;
+}
+
+@media screen and (min-width:300px) and (max-width: 1030px){
+    .contact{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .infocontact{
+        margin: 0px;
+    }
+    .inncontact{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 20px;
+    }
+    .upcontact{
+        gap: 20px;
+    }
+    .down{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
