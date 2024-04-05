@@ -1,14 +1,18 @@
-.back{
-    background-image: url(/Users/kais783212gmail.com/Desktop/projetCDA/front-end/src/Assets/imgfond.png);
-    background-size: cover;
-    filter: blur(1px); 
-    opacity: 0.7; 
-    width: 100%;  
-    position: absolute; 
-    z-index: -1;
-    overflow: hidden;
-    
+.cardpage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
+.back{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
 .containerlogin{
     display: flex;
     flex-direction: column;
@@ -114,4 +118,14 @@ margin-top: 10px;
     cursor: pointer;
     color: red;
     background-color: rgb(95, 28, 119);
+  }
+  .connexion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(49, 5, 65);
+    color: burlywood;
+    border-radius: 15px;
+    border: 1px solid;
+    width: 60%;
   }
