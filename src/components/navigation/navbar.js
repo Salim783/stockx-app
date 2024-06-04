@@ -16,7 +16,7 @@ export default function navbar() {
             <Link to='#' className='link'><li className='li'>Homme</li></Link>
             <Link to='#' className='link'><li className='li'>Femme</li></Link>
             <Link to='#' className='link'><li className='li'>Enfant</li></Link>
-            <Link to='swipper' className='link'><li className='li'>Accessoires</li></Link>
+            <Link to='#' className='link'><li className='li'>Accessoires</li></Link>
             <Link to='contact' className='link'><li className='li'>Contact</li></Link>
             </ul>
             <div className='divsearch'>

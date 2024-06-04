@@ -5,14 +5,12 @@ import Footer from './components/Footer/footer.js'
 import Contact from './components/contact/contact.js'
 import Login from './components/inscritpions/login.js'
 import Annonce from './components/Annonce/annonce.js'
-import Swipper from './components/Swipper/swipper.js'
 import {Routes, Route} from 'react-router-dom';
 const App = () => { 
     return (    
         <div>
         <Navbar/>
         <Routes>
-            <Route path="/swipper" element={<Swipper />}></Route>
             <Route path='/acceuil' element={<Acceuil />}/>
             <Route path='/contact' element={<Contact />}/>
             <Route path='/login'  element={<Login />}/>
