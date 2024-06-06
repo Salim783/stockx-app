@@ -5,7 +5,6 @@ import oeilnn from '../../Assets/oeilnn.png';
 import fond from '../../Assets/imgfond.png';
 
 export default function Login() {
-    const [passwordVisible, setPasswordVisible] = useState(false);
     const [formData, setFormData] = useState({
         sexe: '',
         dateNaissance: '',

@@ -11,7 +11,7 @@ export default function footer() {
     
     <div className='footer' id='footercontact'>
         <div className='foot'>
-            <img src={logo} className='logo'/>
+            <img src={logo} className='logo' alt=''/>
         <input type="search" name='q' placeholder="Recherche" className='search'/>
             <ul className='ulfooter'>
                 <Link><li className='lifooter'>Homme</li></Link>
@@ -25,15 +25,15 @@ export default function footer() {
                 <li className='lifooter'>Mail</li>
                 <li className='lifooter'>legal terms</li>
             </ul>
-            <a href='#ancre'><img src={ancre}/></a>
+            <a href='#ancre'><img src={ancre} alt=''/></a>
             </div>
         <div>
             <hr className='hrfooter'/>
         </div>
         <div className='divlogofooter'>
-            <Link><img src={facebook} className='logofooter'/></Link>
-            <Link><img src={insta} className='logofooter'/></Link>
-            <Link><img src={twitter} className='logofooter'/></Link>
+            <Link><img src={facebook} className='logofooter' alt=''/></Link>
+            <Link><img src={insta} className='logofooter' alt=''/></Link>
+            <Link><img src={twitter} className='logofooter' alt=''/></Link>
         </div>
     </div>
     
