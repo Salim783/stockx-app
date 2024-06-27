@@ -8,7 +8,7 @@ export default function Login() {
     const [formData, setFormData] = useState({
         sexe: '',
         dateNaissance: '',
-        pseudo: '',
+        pseudo: '', // Utilisé comme username
         telephone: '',
         adresse: '',
         email: '',
@@ -49,7 +49,7 @@ export default function Login() {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                nom: formData.pseudo,
+                nom: formData.pseudo, // Utilisation de pseudo comme username
                 email: formData.email,
                 password: formData.password,
                 telephone: formData.telephone,

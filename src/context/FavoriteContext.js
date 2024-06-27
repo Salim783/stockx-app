@@ -4,7 +4,6 @@ import { useAuth } from './authContext';
 
 const FavoritesContext = createContext();
 
-export const useFavorites = () => useContext(FavoritesContext);
 
 export const FavoritesProvider = ({ children }) => {
     const [favorites, setFavorites] = useState([]);
@@ -33,3 +32,4 @@ export const FavoritesProvider = ({ children }) => {
         </FavoritesContext.Provider>
     );
 };
+export const useFavorites = () => useContext(FavoritesContext);

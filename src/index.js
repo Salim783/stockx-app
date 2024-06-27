@@ -1,18 +1,8 @@
-// index.js
-
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client'; // Importez createRoot depuis "react-dom/client"
 import App from './App';
-import { AuthProvider } from './context/authContext';
-import { BrowserRouter as Router } from "react-router-dom";
+import './index.css';
+createRoot(document.getElementById('root')).render(
+  <App />
 
-ReactDOM.render(
-  <React.StrictMode>
-    <AuthProvider>
-      <Router>
-        <App />
-      </Router>
-    </AuthProvider>
-  </React.StrictMode>,
-  document.getElementById('root')
 );

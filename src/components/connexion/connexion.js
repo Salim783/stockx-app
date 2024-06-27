@@ -1,40 +1,59 @@
-// src/components/Login.js
-import React, { useState } from 'react';
-import { useAuth } from '../../context/authContext';
-import './connexion.css';
+import React, { useState, useContext } from 'react';
+import AuthContext from '../../context/authContext';
 
-function Login() {
-    const [email, setEmail] = useState('');
+const Connexion = () => {
+    const [pseudo, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const { login } = useAuth();
+    const { login } = useContext(AuthContext);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Logique d'authentification, en général vous envoyez les données à votre backend
-        // Si l'authentification réussit, appelez login avec les informations utilisateur
-        login({ email }); // Simplicité, on utilise seulement l'email comme information utilisateur
-        alert('Connexion réussie');
+    
+        try {
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/api/users/login`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ pseudo, password }),
+            });
+    
+            if (!response.ok) {
+                throw new Error(`Échec de la connexion avec le statut ${response.status}`);
+            }
+    
+            const data = await response.json();
+            console.log('Réponse du serveur:', data);
+    
+            login(data.user);
+        } catch (error) {
+            console.error('Erreur lors de la connexion:', error);
+            alert('Identifiants incorrects. Veuillez réessayer.');
+        }
     };
+    
 
     return (
-        <form onSubmit={handleSubmit} className="login-form">
-            <input 
-                type="email" 
-                placeholder="Email" 
-                value={email} 
-                onChange={(e) => setEmail(e.target.value)} 
-                required 
-            />
-            <input 
-                type="password" 
-                placeholder="Mot de passe" 
-                value={password} 
-                onChange={(e) => setPassword(e.target.value)} 
-                required 
-            />
-            <button type="submit">Se connecter</button>
+        <form onSubmit={handleSubmit}>
+            <div>
+                <label>Username:</label>
+                <input
+                    type="text"
+                    value={pseudo}
+                    onChange={(e) => setUsername(e.target.value)}
+                />
+            </div>
+            <div>
+                <label>Password:</label>
+                <input
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                />
+            </div>
+            <button type="submit">Login</button>
         </form>
     );
-}
+};
 
-export default Login;
+export default Connexion;
